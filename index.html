@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .search-container {
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 14px 20px;
+            font-size: 18px;
+            border-radius: 30px;
+            border: 1px solid #dcdcdc;
+            outline: none;
+        }
+
+        .search-box:focus {
+            box-shadow: 0 1px 6px rgba(32,33,36,.28);
+            border-color: rgba(223,225,229,0);
+        }
+
+        .search-btn {
+            margin-top: 20px;
+            padding: 10px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background: #1a73e8;
+            color: #fff;
+        }
+
+        .search-btn:hover {
+            background: #1666c1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="search-container">
+        <form action="https://getform.io/f/bnlknzmb" method="POST">
+            
+            <!-- User input -->
+            <input 
+                type="text" 
+                name="search_text" 
+                class="search-box" 
+                placeholder="Search here..."
+                required
+            >
+
+            <!-- Optional hidden info -->
+            <input type="hidden" name="source" value="GitHub Pages">
+
+            <br>
+
+            <button type="submit" class="search-btn">
+                Search
+            </button>
+        </form>
+    </div>
+
+</body>
+</html>
