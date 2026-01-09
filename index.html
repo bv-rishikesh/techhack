@@ -21,6 +21,7 @@
             text-align: center;
             width: 100%;
             max-width: 500px;
+            padding: 20px;
         }
 
         .search-box {
@@ -34,7 +35,7 @@
 
         .search-box:focus {
             box-shadow: 0 1px 6px rgba(32,33,36,.28);
-            border-color: rgba(223,225,229,0);
+            border-color: transparent;
         }
 
         .search-btn {
@@ -55,28 +56,35 @@
 </head>
 <body>
 
-    <div class="search-container">
-        <form action="https://formspree.io/f/xwvvekzn" method="POST">
-            
-            <!-- User input -->
-            <input 
-                type="text" 
-                name="search_text" 
-                class="search-box" 
-                placeholder="Search here..."
-                required
-            >
+<div class="search-container">
+    <form 
+        action="https://formspree.io/f/xwvvekzn" 
+        method="POST"
+    >
 
-            <!-- Optional hidden info -->
-            <input type="hidden" name="source" value="GitHub Pages">
+        <!-- User search input -->
+        <input
+            type="text"
+            name="search_text"
+            class="search-box"
+            placeholder="Search here..."
+            required
+        >
 
-            <br>
+        <!-- Extra info -->
+        <input type="hidden" name="source" value="GitHub Pages">
+        <input type="hidden" name="_subject" value="New Search Submission">
 
-            <button type="submit" class="search-btn">
-                Search
-            </button>
-        </form>
-    </div>
+        <!-- Optional redirect after submit -->
+        <!-- <input type="hidden" name="_redirect" value="https://yourdomain.com/thanks.html"> -->
+
+        <br>
+
+        <button type="submit" class="search-btn">
+            Search
+        </button>
+    </form>
+</div>
 
 </body>
 </html>
