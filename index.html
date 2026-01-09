@@ -62,7 +62,11 @@
         method="POST"
     >
 
-        <!-- User search input -->
+        <!-- REQUIRED for Formspree -->
+        <input type="hidden" name="_replyto" value="noreply@example.com">
+        <input type="hidden" name="_subject" value="New Search Submission">
+
+        <!-- User input -->
         <input
             type="text"
             name="search_text"
@@ -71,12 +75,8 @@
             required
         >
 
-        <!-- Extra info -->
+        <!-- Optional info -->
         <input type="hidden" name="source" value="GitHub Pages">
-        <input type="hidden" name="_subject" value="New Search Submission">
-
-        <!-- Optional redirect after submit -->
-        <!-- <input type="hidden" name="_redirect" value="https://yourdomain.com/thanks.html"> -->
 
         <br>
 
